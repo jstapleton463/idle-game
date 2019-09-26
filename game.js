@@ -1,12 +1,15 @@
-var message = new Text('Welcome!');
-var button = new Button('Click Me!', add);
-var count = 0;
+var newButton = new Button('My Button', click);
+var button = new Button('Hello!');
 
-function add() {
-  count++;
-  if(count < 10) {
-    message.edit('You have clicked ' + count + 'times')
-  } else {
-    message.edit('You win!');
-  }
+var title = new Title('This is my game');
+
+setInterval(btnPress, 1000);   // Set up a loop
+
+function btnPress() {
+  score++;
+  scr.edit(score);
+}
+
+function click() {
+  scr.edit('Clicked!')
 }
